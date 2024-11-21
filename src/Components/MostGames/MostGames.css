@@ -1,0 +1,186 @@
+.games {
+    background-color: #27292a;
+    padding: 50px;
+    border-radius: 16px;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.games h1 {
+    border: white 1px solid;
+    padding: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 16px;
+    animation: border 1s infinite alternate;
+    transition-duration: 0.7s;
+    position: relative;
+}
+
+@keyframes border {
+    from {
+        border-color: black;
+    }
+    to {
+        border-color: #0d6efd;
+    }
+}   
+.games-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px , 300px));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.game-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    word-wrap: break-word;
+    border-radius: 1em;
+}
+.most-card {
+    --border-angle: 0turn;
+    --main-bg: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 5%,
+        #112 60%,
+        #213 95%
+    );
+    border: solid 5px transparent;
+    border-radius: 1em;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+    background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+    background-position: center center;
+    animation: bg-spin 3s linear infinite;
+
+}
+@keyframes bg-spin {
+    to {
+    --border-angle: 1turn;
+    }
+}
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.game-card img {
+    border-radius: 1em;
+}
+
+.title-div {
+    width: 100%;
+}
+.des {
+    width: 100%;
+}
+.price {
+    color: #3283fd;
+    font-weight: bold;
+}
+
+.game-card .btns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+@media (max-width: 492px) {
+    .games {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .games-content {
+        padding: 5px;
+    }
+    .game-card button{
+        font-size: 13.5px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #00d757;
+  }
+  
+  .sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 25px;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+  }
+  
+  .Btn:hover {
+    width: 150px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 10px;
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+  }
+  .Btn:active {
+    transform: translate(2px, 2px);
+  }
+  

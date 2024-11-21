@@ -1,0 +1,43 @@
+
+.copyRight{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 0 0;
+}
+.copyRight {
+    font-size: 18px;
+}
+.copyRight p span {
+    animation: color 0.5s infinite alternate;
+}
+.dev{
+    display: flex;
+    gap: 10px;
+}
+.dev a {
+    color: white;
+    font-size: 20px;
+    margin: -3px;
+    transition: all 0.1s ease-in-out;
+}
+
+.dev a:hover{
+    color: #0d6efd;
+}
+@keyframes color {
+    from {
+        color: white;
+    }
+    to {
+        color: #0d6efd;
+    }
+}
+
+@media (max-width: 600px) {
+    .copyRight {
+        font-size: 15px;
+    }
+    .dev a {
+        font-size: 18px;
+    }
+}

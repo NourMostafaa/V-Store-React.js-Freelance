@@ -1,0 +1,35 @@
+.Most {
+    background-color: #27292a;
+    padding: 50px;
+    border-radius: 16px;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-card-most {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    word-wrap: break-word;
+}
+
+.game-card-most img {
+    border-radius: 1em;
+}
+
+.switch {
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center;
+}
